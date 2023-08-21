@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,700;0,800;1,500&display=swap');
+
+:root{
+
+--color-lightred: hsl(0, 100%, 67%);
+--color-lightredblur: hsla(0, 100%, 67%,0.1);
+
+--color-orangeyellow: hsl(39, 100%, 56%);
+--color-orangeyellowblur: hsla(39, 100%, 56%,0.1);
+
+--color-greenteal: hsl(166, 100%, 37%);
+--color-greentealblur: hsla(166, 100%, 37%,0.1);
+
+--color-cobaltblue: hsl(234, 85%, 45%);
+--color-cobaltblueblur: hsla(234, 85%, 45% , 0.1);
+
+/* Gradients*/
+
+--color-lightslateblue: #7857ff;
+--color-lightslateblueblur: rgba(120, 87, 255, 0.25);
+--color-lightroyalblue : #2e2be9;
+--color-violetblue: #4e21ca;
+--color-persianblue: #2421ca;
+--color-gradient1 : linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);
+
+/*Neutral*/
+
+--color-white: hsl(0, 0%, 100%);
+--color-paleblue: hsl(221, 100%, 96%);
+--color-lightlavender: hsl(241, 100%, 89%);
+--color-darkgrayblue: hsl(224, 30%, 27%);
+--main-font:'Hanken Grotesk', sans-serif;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: var(--main-font);
+}
+
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+/*Main content*/
+
+.container{
+  width: 750px;
+  height: 500px;
+  border-radius: 30px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 20px var(--color-lightslateblueblur);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+/*Result*/
+
+.container_result{
+ height:500px ;
+ display: grid;
+ grid-template-rows: repeat(3,1fr);
+ background:var(--color-gradient1); 
+ border-radius:30px;
+ color: var(--color-white);
+ padding: 20px;
+
+}
+
+
+.container_result-text ,.container_result-round, .container_result-info{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container_result-text > p{
+ letter-spacing: 1px;
+ opacity: 0.8;
+ font-weight: 700;
+ font-size: 1.1em;
+ margin-top: 15px;
+}
+
+.container_result-round{
+  width: 190px;
+  height: 190px;
+  border-radius: 100%;
+  background:var(--color-gradient2);
+  margin: 35px auto 0px auto;
+  box-shadow: inset 0 100px 90px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  align-items: center;
+ }
+ 
+.container_result-round >h1{
+ font-size: 4.1em;
+ margin-bottom: -10px;
+}
+
+.container_result-round >p{
+  font-size: 0.9em;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.container_result-info{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 35px;
+}
+ 
+.container_result-info > h1{
+ margin-bottom: 10px;
+ font-size: 1.7em;
+}
+
+
+
+
+
+
+
+/*Summary*/
+
+.container_summary{
+padding: 40px;
+display: grid;
+grid-template-rows: 0.23fr 1fr 0.3fr;
+}
+
+.container_summary-title > h1{
+color: var(--color-darkgrayblur);
+font-size: 1.3em;
+}
+
+
+.container_summary-info{
+  display:flex;
+  margin-top: 0;
+
+}
+
+.container_summary-info-list{
+  display: grid;
+  grid-template-rows: repeat(4, 30px);
+  row-gap: 40px;
+}
+
+.container_summary-info-list > li{
+  height: 54px;
+  width:300px;
+  display: grid;
+  grid-template-columns:  0.1fr 1fr 0.4fr;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+} 
+.container_summary-info-list > li:hover{
+  width:310px;
+  height: 56px;
+}
+
+li > p:first-of-type{
+  margin-left: 10px;
+}
+.reaction{
+  background-color: var(--color-lightredblur);
+} 
+.memory{
+  background-color: var(--color-orangeyellowblur);
+} 
+.verbal{
+  background-color: var(--color-greentealblur);
+} 
+.visual {
+  background-color: var(--color-cobaltblueblur);
+} 
+
+.reaction > p:first-of-type{
+  color :var(--color-lightred);
+} 
+.memory > p:first-of-type{
+  color: var(--color-orangeyellow);
+} 
+ .verbal > p:first-of-type{
+  color: var(--color-greenteal);
+} 
+ .visual > p:first-of-type{
+  color: var(--color-cobaltblue);
+} 
+
+
+li >p:last-of-type {
+  opacity: 0.7;
+}
+
+button{
+  width: 300px;
+  height: 55px;
+  border: none;
+  border-radius: 30px;
+  color: var(--color-white);
+  font-weight: 700;
+  background-color: var(--color-darkgrayblue);
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover{
+  background-color: var(--color-lightlavender);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  position: fixed;
+  bottom: 0;
+
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}

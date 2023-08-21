@@ -16,6 +16,13 @@ const project= [
     title: "Order Summary",
    
   },
+  {
+    id : 3,
+    img : "./project3/design/active-states.jpg",
+    url : "./project3/index.html",
+    title: "Results summary component",
+   
+  },
 
 ]
 
@@ -32,7 +39,7 @@ const displayProject = (project) =>{
   let display = project.map(item =>{
 
     return `<li>
-    <img src=${item.img} alt="qr-code" id=${item.id}>
+    <img src=${item.img} alt=${item.title} id=${item.id}>
     <h4 class="container-list_title">${item.title}</h4>
     <a href=${item.url} target="_blank" rel="noopener noreferrer">View the project</a>
   </li>`
