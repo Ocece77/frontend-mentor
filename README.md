@@ -28,3 +28,8 @@ While contributing to this project, please follow these guidelines to maintain a
 I greatly appreciate your contributions and your commitment to making this project better for everyone.
 
 **Thank you for contributing and staying courteous!** ❤️
+
+## The page to see my project
+
+See my project on live by clicking on this link:
+https://ocece77.github.io/frontend-mentor/
