@@ -55,11 +55,12 @@ body{
 .container_img{
   display: flex;
   justify-content: center;
+
 }
 
 .container_img > img{
  width:100%;
- object-fit: fill;
+ object-fit: cover;
 }
 
 
