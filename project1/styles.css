@@ -23,7 +23,7 @@
   body{
     background-color:var(--color-lightgray);
     height: 100%;
-    width: 100%;
+    width: 100vw;
 
   }
 

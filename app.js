@@ -10,6 +10,15 @@ const project= [
   },
 
 
+  {
+    id : 2,
+    img : "../project2/images/illustration-hero.svg",
+    url : "./project2/index.html",
+    title: "QR-CODE",
+   
+  },
+
+
 ]
 
 
