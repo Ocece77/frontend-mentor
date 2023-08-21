@@ -3,7 +3,7 @@ const project= [
 
   {
     id : 1,
-    img : "../project1/images/image-qr-code.png",
+    img : "./project1/images/image-qr-code.png",
     url : "./project1/index.html",
     title: "QR-CODE",
    
