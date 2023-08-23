@@ -24,6 +24,14 @@ const project= [
    
   },
 
+  {
+    id : 4,
+    img : "./project4/images/illustration-mockups.svg",
+    url : "./project4/index.html",
+    title: "Landing home Page",
+   
+  },
+
 ]
 
 
