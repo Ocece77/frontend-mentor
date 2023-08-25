@@ -68,7 +68,12 @@ const showProject = (project) => {
 
   img.src = item.img;
   img.alt = item.title;
-  link.href = item.url;
+
+ 
+link.forEach(link =>{
+  link.href = item.url
+})
+
   lang.textContent = item.lang;
   title.textContent = item.title;
   info.textContent= item.info;
