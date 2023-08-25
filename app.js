@@ -1,58 +1,120 @@
+
+
 /*List of Project */
-const project= [
+const projects= [
 
   {
     id : 1,
-    img : "./project1/images/image-qr-code.png",
+    img : "project1/design/desktop-preview.jpg",
     url : "./project1/index.html",
     title: "QR-CODE",
-   
+    info: "For my first project, I had to make a QR-Code card , it's a visually appealing card is designed using HTML and CSS to display a QR code along with relevant information. This card can serve various purposes, such as sharing a website link, contact information, or any other data that can be encoded in a QR code. This was so great for me because it help me to pratice my flexbox",
+    lang : "HTML & CSS"
   },
 
   {
     id : 2,
-    img : "./project2/images/illustration-hero.svg",
+    img : "./project2/design/desktop-preview.jpg",
     url : "./project2/index.html",
     title: "Order Summary",
+    info: "In this second project named \"Order Summary\", I developed an interactive interface to display an order summary using HTML and CSS. This project not only allowed me to create a practical feature but also served as a valuable opportunity to enhance my CSS skills.",
+    lang : "HTML & CSS"
    
   },
   {
     id : 3,
-    img : "./project3/design/active-states.jpg",
+    img : "./project3/design/desktop-preview.jpg",
     url : "./project3/index.html",
     title: "Results summary component",
-   
+    info: "\"Results Summary Component\" mini project, an interactive and visually appealing summary component is designed using HTML and CSS. This component is intended to display summarized information in a user-friendly manner, making it suitable for various web applications and websites.",
+    lang : "HTML & CSS"
   },
 
   {
     id : 4,
-    img : "./project4/images/illustration-mockups.svg",
+    img : "./project4/design/desktop-preview.jpg",
     url : "./project4/index.html",
     title: "Landing home Page",
+    info: "In the \"Huddle Landing Page\" mini project, a captivating landing page is developed using HTML and CSS, featuring a single, impactful introductory section. This section is designed to immediately engage visitors and provide them with essential information about the website's purpose or content.",
+    lang : "HTML & CSS"
    
   },
 
 ]
 
+// set starting item
 
-const containterList = document.querySelector(".containter-list")
+const contentImg = document.getElementById("content-img")
+const contentName = document.getElementById("content-name");
+const contentInfo = document.getElementById("content-info");
 
-window.addEventListener('DOMContentLoaded',() => {
-  displayProject(project);
-});
+const img = document.getElementById("img");
+const alt =document.getElementById("img");
+const link = document.querySelectorAll(".link");
+const title = document.getElementById("title");
+const info = document.getElementById("info")
+const lang = document.getElementById("lang")
 
-const displayProject = (project) =>{
+const btnUp = document.querySelector(".up");
+const btnDown = document.querySelector(".down");
 
-/*map over the array and display an li */
-  let display = project.map(item =>{
 
-    return `<li>
-    <img src=${item.img} alt=${item.title} id=${item.id}>
-    <h4 class="container-list_title">${item.title}</h4>
-    <a href=${item.url} target="_blank" rel="noopener noreferrer">View the project</a>
-  </li>`
-  }).join("")
+let currItem =0; 
 
-/* add the li in the inner html */
-  containterList.innerHTML= display
+/* Set the value for each project  */
+const showProject = (project) => {
+
+  const item = projects[currItem];
+
+  img.src = item.img;
+  img.alt = item.title;
+  link.href = item.url;
+  lang.textContent = item.lang;
+  title.textContent = item.title;
+  info.textContent= item.info;
+}
+
+/* initial page */
+window.addEventListener("DOMContentLoaded",()=>{
+  showProject(currItem);
+})
+
+/* Button to go up  */
+
+btnUp.addEventListener("click", ()=>{
+  currItem++;
+  if( currItem > projects.length -1){
+    currItem = 0;
+  }
+  showProject(currItem);
+  animation()
+
+})
+
+
+/* Button to go down  */
+btnDown.addEventListener("click", ()=>{
+  currItem--;
+  if( currItem < 0){
+    currItem = projects.length -1;
+  }
+  showProject(currItem);
+  animation()
+
+})
+
+
+/*Set animation for each project */
+
+function animation(){
+  contentName.classList.add("animation1")
+  contentInfo.classList.add("animation2")
+  contentImg.classList.add("fadein")
+
+
+  setTimeout(()=> {
+    contentName.classList.remove("animation1")
+    contentInfo.classList.remove("animation2")
+    contentImg.classList.remove("fadein")
+   },700)
 }
