@@ -40,6 +40,16 @@ const projects= [
    
   },
 
+    {
+    id : 5,
+    img : "./project5/design/desktop-design.jpg",
+    url : "./project5/index.html",
+    title: "FAQ Accordion Card",
+    info: "Explore information effortlessly with the \'FAQ Accordion Card\' project, skillfully crafted using JavaScript, CSS, and HTML for an interactive and organized user experience.",
+    lang : "HTML & CSS"
+   
+  },
+
 ]
 
 // set starting item
