@@ -97,6 +97,7 @@ main{
   row-gap: 4em;
 }
 
+
 /*title*/
 
 .main-content_title{
@@ -200,6 +201,7 @@ hr{
   transition:var(--main-transition);
   display: flex;
   justify-content: center;
+
 }
 
 .main-project_img > a:hover{
@@ -226,7 +228,7 @@ hr{
   border-radius: 100%;
   background-color: var(--color-lightgrey);
   transition: var(--main-transition);
-  z-index: 2;
+  z-index:99;
 }
 
 .btn.up{
@@ -247,15 +249,11 @@ bottom:23vw;
 }
 
 .btn.up:hover{
-  top:16vw;
   background-color: var(--color-glaucous);
-  pointer-events: none;
 }
 
 .btn.down:hover{
-  pointer-events: none;
   background-color: var(--color-maize);
-  bottom:22vw;
 }
 
 
@@ -270,7 +268,29 @@ bottom:23vw;
   }
   .main-content_project-info{
     padding-right: 0em;
+    margin-top: 0em;
   }
+
+
+  .fa-solid{
+    transform: rotate(90deg);
+    }
+  
+    .btn.up{
+      left: unset;
+      right: 2em;
+      top: unset;
+      bottom:10vw;
+      z-index:99;
+    }
+    
+    .btn.down{
+    left: 2em;
+    bottom:10vw;
+  
+    }
+
+    
 }
 
 
@@ -278,15 +298,14 @@ bottom:23vw;
 @media screen and (max-width:480px) {
   .main-content{
     padding: 2.5em;
+
   }
   .main-content_project-name >h1{
     font-size: 3.8em;
    }
    .main-content_project-info{
-    margin-top: -3em;
     font-size: 0.8em;
   }
 
-  
 }
 

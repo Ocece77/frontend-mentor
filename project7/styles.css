@@ -186,7 +186,6 @@ color: var(--color-grayishblue);
 
 .container_info-subscription-btn > button:hover{
   background-color: var(--color-cyanlight);
-  font-size: 1.3em;
 }
 
 
@@ -331,8 +330,6 @@ form{
 
 
 
-
-
 /*FOOTER*/
 .attribution {
   position: fixed;
@@ -347,7 +344,6 @@ form{
   color: hsl(228, 45%, 44%);
   font-size: 1.2em;
  }
-
 
 
 
@@ -371,9 +367,6 @@ form{
   .container_sign-in{
     width: 90vw;
   }
-  
-  
-  
   
   
  }
