@@ -223,7 +223,7 @@
   height: 3.4em;
   position: absolute;
   top: -5.5em;
-  left: -6em;
+  left: -6.5em;
   background-color: var(--color-veryDarkGrayishBlue); 
   border-radius: .45em;
   box-shadow: 0 5px 15px var(--color-desaturatedDarkBlue);
@@ -336,17 +336,4 @@
     display: none;
   }
 
-  
-  .container_content-info-author-social{
-    display: flex;
-    justify-content: space-around;
-    padding: 1.2em;
-    align-items: center;
-    width: 15em;
-    height: 3.4em;
-    position: -webkit-sticky;
-    top: 0em;
-    left: 0em;
-    border-radius: 0em;
-  }
  }
