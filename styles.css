@@ -129,7 +129,6 @@ main{
   justify-content: center;
   height: 40%;
   line-height: 5em;
- 
  }
 
  .main-content_project-name >h1{
@@ -147,7 +146,7 @@ main{
  }
 
  .main-content_project-name >a:hover{
- color: var(--color-glaucous);
+   color: var(--color-glaucous);
  }
 
 
@@ -170,7 +169,7 @@ main{
   flex-direction: column;
   row-gap: 1.7em;
   padding-right: 3.7em;
-  margin-top: -1.5em;
+
 }
 
 .main-content_project-info> p{
@@ -210,7 +209,7 @@ hr{
 }
 
 
-.main-project_img > a>img{
+.main-project_img > a > img{
   width: 100%;
   height:100%;
   object-fit: cover;
@@ -233,12 +232,12 @@ hr{
 
 .btn.up{
   left: 2em;
-  top:17vw;
+  top: 17vw;
 }
 
 .btn.down{
 left: 2em;
-bottom:23vw;
+bottom: 23vw;
 }
 
 /*transition for buttons*/
@@ -268,7 +267,7 @@ bottom:23vw;
   }
   .main-content_project-info{
     padding-right: 0em;
-    margin-top: 0em;
+ 
   }
 
 

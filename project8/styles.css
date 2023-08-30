@@ -62,7 +62,8 @@ body{
 .container_section{
   height: 100%;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
   flex-direction: column;
   align-items: flex-start;
   padding: 2.5em 3em;
@@ -181,12 +182,12 @@ body{
   height: 100%;
  }
 
-  .container{
-  width: 90vw;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  border-radius: 10px;
+ .container{
+    width: 80vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
   }
 
   .container_section{

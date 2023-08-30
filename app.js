@@ -71,7 +71,7 @@ const projects= [
     id : 8,
     img : "./project8/design/desktop-design.jpg",
     url : "./project8/index.html",
-    title: "3-column preview card component",
+    title: "Preview card component",
     info: "Crafted a responsive 3-column preview card component project using CSS and HTML. Showcased a sleek design highlighting effective use of layout and styling.",
     lang : "HTML & CSS"
   },
