@@ -9,5 +9,4 @@ signBtn.addEventListener("click", ()=>{
 
 closeBtn.addEventListener("click", ()=>{
   containerSignIn.classList.remove("show-item")
-  closeBtn.classList.add("active-btn")
 })
