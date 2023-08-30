@@ -46,7 +46,16 @@ const projects= [
     url : "./project5/index.html",
     title: "FAQ Accordion Card",
     info: "Explore information effortlessly with the \'FAQ Accordion Card\' project, skillfully crafted using JavaScript, CSS, and HTML for an interactive and organized user experience.",
-    lang : "HTML & CSS"
+    lang : "HTML , CSS & Javascript"
+   
+  },
+  {
+    id : 6,
+    img : "./project6/design/desktop-active-state.jpg",
+    url : "./project6/index.html",
+    title: "Article preview component",
+    info: "Explore the \"Article Preview Component\" project crafted with HTML, CSS, and JavaScript for an interactive way to preview articles in a sleek and user-friendly design.",
+    lang : "HTML , CSS & Javascript"
    
   },
 
