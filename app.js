@@ -58,6 +58,15 @@ const projects= [
     lang : "HTML , CSS & Javascript"
    
   },
+  {
+    id : 7,
+    img : "./project7/design/desktop-design.jpg",
+    url : "./project7/index.html",
+    title: "Single price grid component",
+    info: "Created a Single Price Grid Component using HTML and CSS, demonstrating responsive design and layout",
+    lang : "HTML , CSS & Javascript "
+  },
+
 
 ]
 

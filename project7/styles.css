@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap');
+
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+:root{
+
+  /*theme color */
+
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-cyanlight: hsl(179, 66%, 47%);
+  --color-darkcyanblur: rgba(45, 154, 152 ,.9);
+  --color-brightyellow: hsl(71, 73%, 54%);
+  --color-lightgray: hsl(204, 43%, 93%);
+  --color-grayishblue: hsl(218, 22%, 67%);
+  
+/*Basic color*/
+--color-white : #fff;
+--color-black : rgba(0, 0, 0, 0.169);
+--color-blackbg : rgba(0, 0, 0, 0.25);
+
+
+/*Main color*/
+--main-font:'Karla', sans-serif;
+
+/*transition*/
+
+--main-transition: .3s ease-in;
+
+/*animation*/
+
+--main-animation: fade .3s ease-in  ;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  font-family: var(--main-font);
+}
+
+
+body{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-lightgray) ;
+  overflow: scroll;
+}
+
+/*main container*/
+.container{
+  height: fit-content;
+  width: 50vw;
+  display: grid;
+  grid-template-rows: 45% 55%;
+  background-color: var(--color-white);
+  box-shadow: 0 0 20px var(--color-grayishblue);
+  border-radius: .3em;
+}
+
+
+
+/*top of the grid */
+.container_presentation{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4em;
+}
+
+.container_presentation-title{
+  margin-bottom: 1.3em;
+}
+
+.container_presentation-title >h1{
+  color: var(--color-cyan);
+  font-size: 1.6em;
+}
+
+.container_presentation-subtitle {
+  margin-bottom: .9em;
+}
+
+.container_presentation-subtitle > p{
+  color: var(--color-brightyellow);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.container_presentation-text{
+padding-right: 4em;
+}
+
+.container_presentation-text >p{
+line-height: 1.5em;
+color: var(--color-grayishblue);
+}
+
+
+
+
+/*left bottom container*/
+
+.container_info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.container_info-subscription{
+  background-color: var(--color-cyan);
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.container_info-subscription-title {
+  margin-bottom: -.5em;
+}
+
+
+.container_info-subscription-title >h6{
+  font-size: 1.3em;
+  opacity: .9;
+}
+
+.container_info-subscription-info{
+ line-height: 2em;
+ display: flex;
+ flex-direction: column;
+}
+
+.container_info-subscription-info-price{
+  display: flex; 
+  gap: .4em;
+  margin-bottom: .3em;
+}
+
+.container_info-subscription-info-price > p:first-of-type{
+  font-size: 2.1em;
+  font-weight: 500;
+}
+
+.container_info-subscription-info-price > p:last-of-type{
+  font-size: .9em;
+  font-weight: 400;
+  opacity: .5;
+}
+
+.container_info-subscription-info >p {
+  opacity: .8;
+}
+
+.container_info-subscription-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_info-subscription-btn > button{
+  width: 100%;
+  padding: .8em;
+  background-color: var(--color-brightyellow);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px var(--color-black);
+  color: var(--color-white);
+  font-size: 1.2em;
+  margin-top: -.2em;
+  transition: var(--main-transition);
+}
+
+.container_info-subscription-btn > button:hover{
+  background-color: var(--color-cyanlight);
+  font-size: 1.3em;
+}
+
+
+
+
+/*right container */
+
+.container_info-about{
+  background-color: var( --color-cyanlight);
+  padding: 2.5em;
+}
+
+.container_info-about-title{
+  margin-bottom: 1.6em ;
+}
+
+.container_info-about-title > h6{
+  font-size: 1.2em;
+}
+
+.container_info-about-list > ul {
+  list-style: none;
+}
+
+.container_info-about-list > ul >li {
+  font-weight: 400;
+  opacity: .7;
+  line-height: 1.4em;
+  font-size: .95em;
+}
+
+
+
+
+
+
+/*sign in container*/
+
+.container_sign{
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-blackbg);
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: var(--main-animation);
+  top: 0;
+}
+
+.container_sign-in{
+  flex-direction: column;
+  height: fit-content;
+  width: 34vw;
+  position: relative;
+  background: var(--color-darkcyanblur);
+  box-shadow: 0 10px 15px var(--color-black);
+  border: solid 1px var(--color-white);
+  border-radius: 10px;
+  padding: 1.2em 2em;
+}
+
+
+.container_sign-in > h1{
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 2.3em;
+  margin-bottom: 1em;
+  text-align: center;
+  text-shadow: 0 0 10px var(--color-black);
+}
+
+form{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em
+}
+
+.container_sign-in-placeholder{
+  width: 100%;
+}
+
+.container_sign-in-placeholder > input{
+ border: solid 1px var(--color-white);
+ box-shadow: 0 0 10px var(--color-white);
+ border-radius: 10px;
+ padding: .6em .4em;
+ width: 100%;
+ opacity: .8;
+}
+
+.container_sign-in_form-checkbox{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 1em;
+  font-size: .9em;
+}
+
+.container_sign-in_form-submit{
+  display: flex;
+  justify-content: center;
+}
+
+.container_sign-in_form-submit > input{
+  padding: 1em 3em;
+  border: none;
+  border-radius: 1em;
+  font-weight: 700;
+  color: var(--color-cyan);
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px var(--color-white);
+  transition: var(--main-transition);
+}
+
+.container_sign-in_form-submit > input:hover{
+  color: var(--color-brightyellow);
+}
+
+.btn{
+  position: absolute;
+  border: none;
+  background: transparent;
+  right: 1.8em;
+  top: 1.5em;
+  transition: var(--main-transition);
+}
+
+
+
+.btn:hover{
+ transform: rotate(90deg);
+ color: aqua;
+}
+
+
+/*content that being add with js*/
+
+.show-item{
+  display: flex;
+}
+
+
+
+
+
+/*FOOTER*/
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px; 
+  text-align: center; 
+}
+
+.attribution > a { 
+  color: hsl(228, 45%, 44%);
+  font-size: 1.2em;
+ }
+
+
+
+
+
+ /*T Small screens, laptops.*/
+ @media screen and (max-width : 1024px) {
+ 
+  .container{
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container_info{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+  }
+
+
+  .container_sign-in{
+    width: 90vw;
+  }
+  
+  
+  
+  
+  
+ }
+
+
+ /*Pads, Tablets and Mobile devices */
+ @media screen and (max-width : 768px) {
+  body{
+    height: 100%;
+  }
+
+  .container{
+    margin-top: 2em;
+  }
+
+  .container_presentation{
+    padding: 2em;
+  }
+
+  .container_presentation-text{
+    padding-right: 0em;
+  }
+
+}
