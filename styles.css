@@ -169,7 +169,7 @@ main{
   flex-direction: column;
   row-gap: 1.7em;
   padding-right: 3.7em;
-
+  margin-top: -1.5em;
 }
 
 .main-content_project-info> p{
@@ -232,7 +232,7 @@ hr{
 
 .btn.up{
   left: 2em;
-  top: 17vw;
+  top:17vw;
 }
 
 .btn.down{
@@ -269,7 +269,6 @@ bottom: 23vw;
     padding-right: 0em;
  
   }
-
 
   .fa-solid{
     transform: rotate(90deg);

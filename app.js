@@ -76,6 +76,15 @@ const projects= [
     lang : "HTML & CSS"
   },
 
+  {
+    id : 9,
+    img : "./project9/design/desktop-design.jpg",
+    url : "./project9/index.html",
+    title: "Newsletter sign-up form with success message",
+    info: "A web project that implements a newsletter sign-up form in HTML and CSS with a success message for user feedback in JavaScript.",
+    lang : "HTML , CSS & Javascript "
+  },
+
 
 ]
 

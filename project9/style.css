@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+  /*Color*/
+
+--color-tomato: rgb(255, 98, 87);
+--color-darkslategrey: hsl(234, 29%, 20%);
+--color-charcoalgrey: hsl(235, 18%, 26%);
+--color-grey: hsl(231, 7%, 60%);
+--color-white: hsl(0, 0%, 100%);
+
+/*Typography*/
+--font-family:'Roboto', sans-serif;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+p , li {
+  color: var(--color-charcoalgrey);
+  font-size: .8em;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  font-family: var(--font-family);
+  height: 100%;
+  width: 100vw;
+  background-color: var(--color-charcoalgrey);
+}
+ 
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  height: 100vh;
+}
+
+/*main container*/
+.container{
+  background-color: var(--color-white);
+  min-width: 50vw;
+  height: 60%;
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0 0 20px var(--color-darkslategrey);
+}
+
+/*left part with the text*/
+.container-content{
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-info{
+  width: 60%;
+  padding:0 4em 0 1.3em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-info_title{
+  letter-spacing: .05em;
+}
+
+.container-info_title > h1 , .modal-container_title > h1{
+  color:var(--color-darkslategrey);
+  font-size: 2.6em;
+}
+
+.container-info_paragraph{
+  line-height: 1.2em;
+}
+
+.container-info_list >ul {
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+}
+
+.container-info_list >ul > li {
+  display: flex;
+  gap: .6em;
+}
+
+.container-info_form{
+  margin-top: 1em;
+  display: grid;
+  gap: 1em;
+}
+
+.input{
+  display: flex;
+  justify-content: space-between;
+  font-size: .7em;
+  font-weight: 700;
+  margin-bottom: -.5em;
+}
+
+/* when the email isnt valid*/
+.input > label:last-of-type{
+  color: var(--color-tomato);
+  opacity: 0.9;
+  display: none;
+}
+
+
+form > input:first-of-type{
+  color: var(--color-grey);
+  padding: 1em;
+  border-radius: 7px;
+  border: 1px solid var(--color-grey);
+ }
+
+
+ form > input:last-of-type , .modal-container_btn > button{
+  color: var(--color-white);
+  padding: 1em;
+  border-radius: 7px;
+  background-color: var(--color-darkslategrey);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+ }
+ 
+ 
+/*right part with the image */
+.container-img{
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+
+.container-img > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.modal-container_btn > button{
+  width: 100%;
+
+}
+
+
+/*Modal*/
+
+
+.modal{
+  background-color: var(--color-white);
+  min-width: 27vw;
+  width: 30vw;
+  height: 37vh;
+  display: flex;
+  border-radius: 30px;
+  padding: 3em 0;
+  position: fixed;
+  box-shadow: 0 0 20px var(--color-darkslategrey);
+  visibility: hidden;
+}
+
+
+.modal-container{
+  padding:1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  justify-content: center;
+
+}
+
+
+
+
+/*FOOTER*/
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px; 
+  text-align: center; 
+}
+
+.attribution > a { 
+  color: hsl(228, 45%, 44%);
+  font-size: 1.2em;
+ }
+
+
+  /*Media queries for small screen , tablets and mobile phone*/
+
+  @media screen and (max-width : 1024px) {
+
+    .container{
+      min-width: 50vw;
+    }
+    
+    .modal{
+      min-width: 50vw;
+      height: 33vh;
+    }
+    
+ 
+    
+
+
+    }
+
+  @media screen and (max-width : 764px) {
+
+    main{
+      padding: 0em;
+    }
+
+    .container{
+      width: 100%;
+      height: 100vh;
+      border-radius: 0px;
+    }
+    
+    .container-info{
+      width: 100%;
+      padding:2em;
+      height: 60%;
+    }
+
+    .container-img{
+      width: 100%;
+      height: 40%;
+    }
+    .container-info_title > h1 {
+      font-size: 2.6em;
+    }
+
+    
+    .container-img > img{
+      object-fit: cover;
+    }
+
+    .container-content{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    
+    .modal{
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    }
+
