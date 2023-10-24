@@ -84,6 +84,7 @@ main{
   line-height: 1.2em;
 }
 
+
 .container-info_list >ul {
   display: flex;
   flex-direction: column;
@@ -110,7 +111,7 @@ main{
 }
 
 /* when the email isnt valid*/
-.input > label:last-of-type{
+.input > span{
   color: var(--color-tomato);
   opacity: 0.9;
   display: none;
@@ -156,6 +157,10 @@ form > input:first-of-type{
 
 }
 
+.modal-container_p > p > span{
+  font-weight: 800;
+}
+
 
 /*Modal*/
 
@@ -164,13 +169,12 @@ form > input:first-of-type{
   background-color: var(--color-white);
   min-width: 27vw;
   width: 30vw;
-  height: 37vh;
+  height: fit-content;
   display: flex;
   border-radius: 30px;
   padding: 3em 0;
   position: fixed;
   box-shadow: 0 0 20px var(--color-darkslategrey);
-  visibility: hidden;
 }
 
 
@@ -185,6 +189,12 @@ form > input:first-of-type{
 
 
 
+/*show / hide item*/
+
+
+.hide-item{
+  display: none;
+}
 
 /*FOOTER*/
 .attribution {
@@ -212,12 +222,7 @@ form > input:first-of-type{
     
     .modal{
       min-width: 50vw;
-      height: 33vh;
     }
-    
- 
-    
-
 
     }
 
@@ -228,9 +233,7 @@ form > input:first-of-type{
     }
 
     .container{
-      width: 100%;
       height: 100vh;
-      border-radius: 0px;
     }
     
     .container-info{
@@ -256,12 +259,7 @@ form > input:first-of-type{
       display: flex;
       flex-direction: column-reverse;
     }
-    
-    .modal{
-      width: 100vw;
-      height: 100vh;
-      border-radius: 0;
-    }
+
 
     }
 

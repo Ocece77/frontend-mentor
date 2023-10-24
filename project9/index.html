@@ -36,13 +36,13 @@
       </ul>
   </div>
 
-  <form class="container-info_form">
+  <form class="container-info_form" action="javascript:void(0);">
     <div class="input">
       <label for="email">Email Address</label>
-      <label for="email">Valid email required</label>
+      <span id="email-error"></span>
     </div>
-      <input type="email" name="email" id="email" placeholder="email@company.com">
-      <input type="button" class="btn btn-default btn-dark" value="Subscribe to monthly newsletter">
+    <input type="email" name="email" id="email" placeholder="email@company.com" pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"  required>
+    <input id="subscription-btn" type="button" value="Subscribe to monthly newsletter">
   </form>
 </div>
 
@@ -55,7 +55,7 @@
 
 
   <!-- Success message start -->
-  <div class="modal">
+  <div class="modal hide-item">
 
     <div class="modal-container">
 
@@ -68,13 +68,13 @@
       </div>
 
       <div class="modal-container_p">
-        <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>
+        <p>A confirmation email has been sent to <span id="mail-user">ash@loremcompany.com</span>
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
 
       <div class="modal-container_btn">
-        <button >Dismiss message</button> 
+        <button id="modal-btn">Dismiss message</button> 
       </div>
 
     </div>
@@ -90,5 +90,6 @@
     Coded by <a href="https://github.com/Ocece77">Ocece77</a>.
   </div>
 
+  <script src="app.js"></script>
 </body>
 </html>
