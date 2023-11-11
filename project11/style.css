@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;700;900&display=swap');
+:root{
+  /*Primary*/
+  --color-white: hsl(0, 0%, 100%);
+  --color-lightgrey: hsl(217, 12%, 63%);
+  --color-mediumgrey: hsl(216, 12%, 54%);
+  --color-darkblue: hsl(214, 29%, 11%);
+  --color-darkerblue: #0c1018;
+  --color-lightdarkblue: hsla(216, 11%, 27%, 0.396);
+  --color-orange: rgb(251, 116, 19);
+
+  /*typography*/
+  --main-font: 'Overpass' , 'sans-serif';
+  --main-transition : ease .5s;
+
+} 
+
+
+*{
+  font-family:  var(--main-font);
+}
+
+html,
+body{
+  height: 100%;
+  background-color: var(--color-darkerblue);
+}
+
+
+p{
+  font-size: 1em;
+}
+
+
+button , .icon{
+  background-color: var(--color-lightdarkblue);
+  border-radius: 50%;
+  border: none;
+  width: 3.3em;
+  height: 3.3em;
+  color: var(--color-white);
+  transition: var(--main-transition);
+}
+
+button[type=submit]{
+  background-color: var(--color-orange);
+  border-radius: 30px;
+  border: none;
+  padding: .30em;
+  letter-spacing: .1em;
+  width: 95%;
+  color: var(--color-white);
+  transition: var(--main-transition);
+}
+.active{
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+button:hover{
+  background-color: var(--color-lightgrey);
+}
+
+button[type=submit]:hover{
+  background-color: var(--color-white);
+  color: var(--color-orange);
+}
+
+
+/*FOOTER*/
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px; 
+  text-align: center; 
+}
+
+.attribution > a { 
+  color: hsl(228, 45%, 44%);
+  font-size: 1.2em;
+ }
