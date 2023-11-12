@@ -85,6 +85,26 @@ const projects= [
     lang : "HTML , CSS & Javascript "
   },
 
+  {
+    id : 11,
+    img : "./project11/design/desktop-design.jpg",
+    url : "./project11/index.html",
+    title: "Interactive rating component",
+    info: "An interactive rating component implementing HTML, Bootstrap, and JavaScript for user-friendly rating selection.",
+    lang : "HTML , BOOTSTRAP 5 & Javascript "
+  },
+
+  {
+    id : 12,
+    img : "./project12/design/desktop-design.jpg",
+    url : "./project12/index.html",
+    title: "Four card feature section",
+    info: "Four card feature section provides a visually appealing and concise display of four distinct features, enhancing the presentation of a product or service through HTML and CSS.",
+    lang : "HTML , BOOTSTRAP 5 "
+  },
+
+  
+
 
 ]
 

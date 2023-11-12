@@ -5,45 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+   <!--Bootstrap CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
 
 </head>
 <body>
   
+  <div class="container">
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <div class="row">
 
-  000
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      <div class="col-md-4">
+        <img src="images/bg-card-front.png" alt="front-card">
+        <img src="images/bg-card-back.png" alt="back-card">
+      </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      <div class="col-md-8">
+        <form >
+          <div class="mb-3">
+            <label for="cardholderName" class="form-label text-uppercase">cardholder Name</label>
+            <input type="text" name="cardholderName" id="cardholderName" placeholder="e.g. Jane Appleseed" class="form-control">
+          </div>
 
-  CVC
-  e.g. 123
+          <div class="mb-3">
+            <label for="cardnumber" class="form-label text-uppercase">card number</label>
+            <input type="text" name="cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" class="form-control">
+          </div>
 
-  Confirm
+          <div class="row">
+            <div class="col-6 mb-3">
+              <label for="date" class="form-label">Exp. Date (MM/YY)</label>
+              <input type="number" name="date" id="month" placeholder="MM">
+              <input type="number" name="date" id="year" placeholder="YY">
+            </div>
 
-  <!-- Completed state start -->
+            <div class="col-6">
+              <label for="cvc" class="form-label"></label>
+              <input type="number" name="cvc" id="cvc" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-12">
+            <input type="submit" value="Confirm" class="btn">
+          </div>
+
+        </form>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <!-- Completed state start 
 
   Thank you!
   We've added your card details
-  Continue
+  Continue-->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Ocece77">Ocece77</a>.
   </div>
+
 </body>
 </html>

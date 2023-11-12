@@ -1,7 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+:root{
+  /*Primary*/
+  --color-lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --color-red: hsl(0, 100%, 66%);
+
+  /*neutral*/
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-lightgrayishviolet: hsl(270, 3%, 87%);
+  --color-darkgrayishviolet: hsl(279, 6%, 55%);
+  --color-verydarkviolet: hsl(278, 68%, 11%);
+
+  --main-font : 'Roboto', sans-serif;
+
+} 
+
+
+*{
+  font-size: 18px;
+  font-family:  var(--main-font);
+  font-weight: 500;
+  color:var(--color-verydarkviolet);
+}
+
+html,
+body{
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
 .attribution {
-   font-size: 11px;
-   text-align: center; 
-  }
-.attribution a { 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px; 
+  text-align: center; 
+}
+
+.attribution > a { 
   color: hsl(228, 45%, 44%);
+  font-size: 1.2em;
  }

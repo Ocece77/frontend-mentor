@@ -1,0 +1,60 @@
+
+:root{
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  
+  /*Neutral*/
+  
+  --color-verydarkblue: hsl(234, 12%, 34%);
+  --color-grayishblue: hsl(228, 22%, 79%);
+  --color-verylightgray: hsl(0, 0%, 98%);
+  
+} 
+
+
+body,
+html{
+  height: 100%;
+  background-color: var(--color-verylightgray);
+}
+
+.box{
+  width: 80%;
+
+  box-shadow: -5px 5px 20px var(--color-grayishblue);
+  background-color: var(--color-verylightgray);
+}
+
+.box.green{
+  border-top: solid 5px var(--color-cyan);
+}
+
+.box.red{
+  border-top: solid 5px var(--color-red);
+}
+
+.box.orange{
+  border-top: solid 5px var(--color-orange);
+  margin-top: -8em;
+}
+
+.box.blue{
+  border-top: solid 5px var(--color-blue);
+}
+/*footer*/
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px; 
+  text-align: center; 
+}
+
+.attribution > a { 
+
+  font-size: 1.2em;
+ }
