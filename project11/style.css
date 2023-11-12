@@ -42,11 +42,11 @@ button , .icon{
   transition: var(--main-transition);
 }
 
-button[type=submit]{
+input[type=submit]{
   background-color: var(--color-orange);
   border-radius: 30px;
   border: none;
-  padding: .30em;
+  padding: .9em;
   letter-spacing: .1em;
   width: 95%;
   color: var(--color-white);
@@ -60,7 +60,7 @@ button:hover{
   background-color: var(--color-lightgrey);
 }
 
-button[type=submit]:hover{
+input[type=submit]:hover{
   background-color: var(--color-white);
   color: var(--color-orange);
 }
@@ -74,9 +74,10 @@ button[type=submit]:hover{
   right: 0;
   font-size: 8px; 
   text-align: center; 
+  color: var(--color-orange);
 }
 
 .attribution > a { 
-  color: hsl(228, 45%, 44%);
+  color: var(--color-white);
   font-size: 1.2em;
  }

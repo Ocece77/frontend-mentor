@@ -20,7 +20,7 @@
 <body>
 
 <div class="container-fluid h-100 ">
-    <div class="row h-100  d-flex justify-content-center align-items-center ">
+    <div id="feedback-box" class="row h-100  d-flex justify-content-center align-items-center ">
        <div class="col-lg-4 col-md-7 col-sm-7  p-4" style="background-color: var(--color-darkblue); border-radius: 30px;">
 
          <div class="row row-cols-1 h-100 w-100 d-flex align-items-end  p-3">
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="col-12 d-flex justify-content-center">
-                  <button id="submit" type="submit" class=" text-uppercase">Submit</button>
+                  <input id="submit" type="submit" value="submit" class=" text-uppercase">
                 </div>
               </div>
 
@@ -61,7 +61,7 @@
        </div>  
     </div>
 
-    <div class="row h-100  d-flex justify-content-center align-items-center d-none">
+    <div id="result-box" class="row h-100  d-flex justify-content-center align-items-center d-none">
       <div class="col-lg-4 col-md-7 col-sm-7  p-4" style="background-color: var(--color-darkblue); border-radius: 30px;">
 
         <div class="row row-cols-1 h-100 w-100 d-flex align-items-center p-4">
@@ -72,7 +72,7 @@
 
            <div class="col mb-3">
              <div class="d-flex justify-content-center align-items-center " >
-               <p style="color: #fb7413; ">You selected 4 out 5</p>
+               <p id="rating" style="color: #fb7413; ">You selected 4 out 5</p>
              </div> 
            </div>
 
