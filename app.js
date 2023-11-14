@@ -102,6 +102,14 @@ const projects= [
     info: "Four card feature section provides a visually appealing and concise display of four distinct features, enhancing the presentation of a product or service through HTML and CSS.",
     lang : "HTML , BOOTSTRAP 5 "
   },
+{
+  id : 13,
+  img : "./project13/design/desktop-design.jpg",
+  url : "./project13/index.html",
+  title: "Advice generator app",
+  info: "Advice generator app that generate a new advice everytime the button is clicked ! ",
+  lang : "HTML , BOOTSTRAP 5, JS , and API  "
+},
 
   
 
