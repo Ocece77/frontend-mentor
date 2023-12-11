@@ -12,8 +12,7 @@
   --color-darkgrayishviolet: hsl(279, 6%, 55%);
   --color-verydarkviolet: hsl(278, 68%, 11%);
 
-  --main-font : 'Roboto', sans-serif;
-
+  --main-font :  'Space Grotesk', sans-serif;
 } 
 
 
@@ -27,18 +26,21 @@
 html,
 body{
   height: 100%;
+  width: 100vw;
 }
 
 
 
+.bg1{
+  background-image: url(./images/bg-main-desktop.png) ;
+  background-repeat: no-repeat;
+}
 
 
 
-
-
-
-
-
+.letter-spacing{
+  letter-spacing: .03em;
+}
 
 /*FOOTER*/
 .attribution {

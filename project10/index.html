@@ -15,19 +15,35 @@
 </head>
 <body>
   
-  <div class="container">
+  <div class="container-fluid h-100 ">
 
-    <div class="row">
+    <div class="row h-100">
 
+      <div class="col-md-5 bg1 position-relative">
 
-      <div class="col-md-4">
-        <img src="images/bg-card-front.png" alt="front-card">
-        <img src="images/bg-card-back.png" alt="back-card">
+        <div class="position-absolute translate-middle shadow-lg" style="top:30%; left: 65%;">
+          <img src="./images/bg-card-front.png" alt="back card">
+          <p class="position-absolute text-capitalize text-light fs-3 letter-spacing  fw-light"  style="top:53%; left:10%;">0000 0000 0000 0000</p>
+          <p  class="position-absolute text-capitalize text-light fw-light"  style="top:80%; left:10%;">Jane Appleseed</p>
+          <p  class="position-absolute text-capitalize text-light fw-light"  style="top:80%; left:80%;">00/00</p>
+        <div>
+
+          </div>
+        </div>
+        
+        <div class="position-absolute  translate-middle shadow-lg" style="top:61%; left: 80%;">
+          <img class="position-relative" src="./images/bg-card-back.png" alt="back card">
+            <p class="position-absolute text-capitalize text-light fw-light"  style="top:44%; left:80%;">000</p>
+        </div>
+
       </div>
 
+      <div class="col-md-7 ">
 
-      <div class="col-md-8">
-        <form >
+        <div class="row  h-100 d-flex justify-content-center align-items-center ">
+    
+        <form class=" col-7  ">
+
           <div class="mb-3">
             <label for="cardholderName" class="form-label text-uppercase">cardholder Name</label>
             <input type="text" name="cardholderName" id="cardholderName" placeholder="e.g. Jane Appleseed" class="form-control">
@@ -35,27 +51,29 @@
 
           <div class="mb-3">
             <label for="cardnumber" class="form-label text-uppercase">card number</label>
-            <input type="text" name="cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" class="form-control">
+            <input type="text" name="cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" class="form-control p-2">
           </div>
 
           <div class="row">
             <div class="col-6 mb-3">
-              <label for="date" class="form-label">Exp. Date (MM/YY)</label>
+              <label for="date" class="form-label ">Exp. Date (MM/YY)</label>
               <input type="number" name="date" id="month" placeholder="MM">
               <input type="number" name="date" id="year" placeholder="YY">
             </div>
 
             <div class="col-6">
-              <label for="cvc" class="form-label"></label>
-              <input type="number" name="cvc" id="cvc" class="form-control">
+              <label for="cvc" class="form-label">CVC</label>
+              <input type="number" name="cvc" id="cvc" class="form-control p-2">
             </div>
           </div>
 
-          <div class="col-12">
-            <input type="submit" value="Confirm" class="btn">
+          <div class=" col-12">
+            <input class="px-5 py-2" type="submit" value="Confirm" class="btn">
           </div>
 
         </form>
+      </div>
+
       </div>
 
 

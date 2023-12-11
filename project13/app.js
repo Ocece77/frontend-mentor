@@ -10,8 +10,7 @@ const animation = () => {
 
   setTimeout(()=>{
     number.classList.remove("animation")
-  adviceText.classList.remove("animation")
-
+    adviceText.classList.remove("animation")
   }, 700 )
 }
 
@@ -22,10 +21,7 @@ btn.addEventListener("click" , ()=>{
        animation()
        number.textContent = `advice #${data.slip["id"]}`
        adviceText.textContent = `\"${data.slip["advice"]}\"`
-       
   })
-
-   
 
 })
 
