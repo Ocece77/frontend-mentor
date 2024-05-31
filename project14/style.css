@@ -112,12 +112,17 @@ html, body , .container{
    background-color: var(--color-grey);
    padding:11px 60px;
    border-radius: 5px;
+   transition: .5s;
 }
 
-
+.container-content-list > ul > li:hover  {
+  background-color: var(--color-green);
+}
+.container-content-list > ul > li >a:hover {
+  color: var(--color-darkgrey);
+}
 
 .container-content-list > ul > li >a{
   text-decoration: none;
   font-weight: 600;
 }
-
