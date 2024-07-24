@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@layer base {
+
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url(/assets/static/Inter-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Inter-Bold";
+    src: url(/assets/static/Inter-Bold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Inter-ExtraBold";
+    src: url(/assets/static/Inter-ExtraBold.ttf) format("truetype");
+  }
+
+}

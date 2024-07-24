@@ -111,6 +111,17 @@ const projects= [
   lang : "HTML , BOOTSTRAP 5, JS , and API  "
 },
 
+{
+  id : 15,
+  img : "./project15/design/desktop-design.jpg",
+  url : "",
+  title: "News homepage",
+  info: "This news homepage was an excellent opportunity to practice my CSS Grid skills. There has been a lots of tricky decisions to make and plenty of learning opportunities ",
+  lang : "REACT JS , TAILWIND "
+},
+
+  
+
   
 
 
