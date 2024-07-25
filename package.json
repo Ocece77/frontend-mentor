@@ -4,7 +4,7 @@
   "description": "This repository contains my solutions for projects from the [Frontend Mentor](https://www.frontendmentor.io/) website.",
   "main": "app.js",
   "scripts": {
-    "run-projet15": "cd projet15 && npm i && npm run deploy",
+    "projet15": "cd projet15 && npm i && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
