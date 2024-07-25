@@ -114,10 +114,10 @@ const projects= [
 {
   id : 15,
   img : "./projet15/src/design/desktop-design.jpg",
-  url : "",
+  url : "https://projet15.onrender.com",
   title: "News homepage",
   info: "This news homepage was an excellent opportunity to practice my CSS Grid skills. There has been a lots of tricky decisions to make and plenty of learning opportunities ",
-  lang : "REACT JS , TAILWIND "
+  lang : "REACT JS , TAILWIND CSS"
 },
 
   
