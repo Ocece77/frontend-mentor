@@ -113,7 +113,7 @@ const projects= [
 
 {
   id : 15,
-  img : "./project15/design/desktop-design.jpg",
+  img : "./projet15/src/design/desktop-design.jpg",
   url : "",
   title: "News homepage",
   info: "This news homepage was an excellent opportunity to practice my CSS Grid skills. There has been a lots of tricky decisions to make and plenty of learning opportunities ",
