@@ -120,6 +120,14 @@ const projects= [
   lang : "REACT JS , TAILWIND CSS"
 },
 
+{
+  id : 16,
+  img : "./project16/public/design/desktop-preview.jpg",
+  url : "https://projet16.onrender.com",
+  title: "Interactive card details form  ",
+  info: "This fun project was a cool way to practice the UseEffect and UseState hooks from Reats, while also putting your HTML and CSS skills to the test.",
+  lang : "REACT JS , TAILWIND CSS"
+},
   
 
   

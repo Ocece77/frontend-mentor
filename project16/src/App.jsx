@@ -2,6 +2,7 @@ import { useState } from "react"
 import CardLayout from "./components/CardLayout"
 import Form from "./components/Form"
 import Thanks from "./components/Thanks";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       {!submitted && <Form cardholderInfo={cardholderInfo} setCardholderInfo={setCardholderInfo} setSubmitted={setSubmitted}/>}
       {submitted && <Thanks setSubmitted={setSubmitted} setCardholderInfo={setCardholderInfo}/>}
     </div>
+
+    <Footer/>
 
     </>
   )

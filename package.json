@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "projet15": "cd projet15 && npm i && npm run build",
+    "projet16": "cd project16 && npm i && npm run build",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
