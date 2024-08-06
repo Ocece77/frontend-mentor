@@ -13,14 +13,15 @@ function App() {
   cardExpDateYY: "",
   cardCvc: ""})
 
+
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
     <div className="grid md:grid-cols-2 font-grotesk gap-y-9">
       <CardLayout cardholderInfo={cardholderInfo}/>
-      {!submitted && <Form setCardholderInfo={setCardholderInfo} setSubmitted={setSubmitted}/>}
-      {submitted && <Thanks setSubmitted={setSubmitted}/>}
+      {!submitted && <Form cardholderInfo={cardholderInfo} setCardholderInfo={setCardholderInfo} setSubmitted={setSubmitted}/>}
+      {submitted && <Thanks setSubmitted={setSubmitted} setCardholderInfo={setCardholderInfo}/>}
     </div>
 
     </>

@@ -5,7 +5,7 @@ import backCard from '../assets/images/bg-card-back.png'
 import cardLogo from '/src/assets/images/card-logo.svg';
 import PropTypes from 'prop-types';
 
-const CardLayout = ({...cardholderInfo})=>{
+const CardLayout = ({cardholderInfo})=>{
 
 
   return(
