@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 
- const RangeInput = ({getValue ,min = 0, max = 32 , defaultValue = 50}) =>{
+ const RangeInput = ({getValue ,min , max  , defaultValue }) =>{
 
   const[value, setValue] = useState(defaultValue);
 
@@ -29,7 +29,7 @@ import PropTypes from 'prop-types';
   )
 }
 
-RangeInput.PropTypes ={
+RangeInput.propTypes ={
   getValue : PropTypes.func.isRequired,
   min : PropTypes.number.isRequired,
   max : PropTypes.number.isRequired,

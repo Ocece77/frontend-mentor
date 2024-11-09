@@ -5,7 +5,7 @@ import checkIcon from "../assets/images/icon-check.svg";
 
 const Card = () =>{
 
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(16)
 
   const getValue =(child) =>{
     setValue(child)
@@ -39,7 +39,7 @@ const Card = () =>{
 
               {/*second row with the slider */}
               <div>
-                 <RangeInput getValue={getValue}/>
+                 <RangeInput getValue={getValue} min={0} max={32}  defaultValue={16}/>
               </div>
 
 

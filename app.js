@@ -132,7 +132,7 @@ const projects= [
 {
   id : 17,
   img : "./project17/src/assets/design/desktop-design.jpg",
-  url : "",
+  url : "https://project17-6ehz.onrender.com",
   title: " Interactive pricing component",
   info: "This fun project permit you to use the slider and toggle to see prices for different page view numbers",
   lang : "REACT JS , TAILWIND CSS, SASS"
