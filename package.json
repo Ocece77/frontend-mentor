@@ -6,12 +6,17 @@
   "scripts": {
     "projet15": "cd projet15 && npm i && npm run build",
     "project16": "cd project16 && npm i && npm run build",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2"
   }
 }
