@@ -128,6 +128,15 @@ const projects= [
   info: "This fun project was a cool way to practice the UseEffect and UseState hooks from Reats, while also putting your HTML and CSS skills to the test.",
   lang : "REACT JS , TAILWIND CSS"
 },
+
+{
+  id : 17,
+  img : "./project17/src/assets/design/desktop-design.jpg",
+  url : "",
+  title: " Interactive pricing component",
+  info: "This fun project permit you to use the slider and toggle to see prices for different page view numbers",
+  lang : "REACT JS , TAILWIND CSS, SASS"
+},
   
 
   
