@@ -1,0 +1,7 @@
+<ul class="flex lg:flex-col lg:gap-3 h-1/2 ">
+@for ( step of stepLists ; track step.position){
+  <li class="cursor-pointer">
+   <a routerLink="step-{{step.positionString}}"><app-step-info [stepInfo]="step"></app-step-info></a> 
+  </li>
+}
+</ul>

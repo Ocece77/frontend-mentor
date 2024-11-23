@@ -1,9 +1,9 @@
-<div class="w-full h-full ">
+<div (click)="onClick()" class="w-full h-full ">
   <!--desktop design-->
   <div class="w-full flex lg:grid lg:grid-cols-5 lg:gap-2.5 ">
       <!--round with the step number-->
       <div class="flex mx-2 justify-center items-center lg:col-span-1 w-full h-full min-w-6">
-        <div class=" flex justify-center items-center lg:w-5 lg:h-5 w-7 h-7 rounded-full border border-white hover:bg-[#bfe2fd] hover:text-[#02295a] text-white lg:text-[.6em] text-sm transition-all ">
+        <div [ngClass]="{'bg-[#bfe2fd] ' : stepInfo.currentStep}" class=" flex justify-center items-center lg:w-5 lg:h-5 w-7 h-7 rounded-full border border-white hover:bg-[#bfe2fd] hover:text-[#02295a] text-white lg:text-[.6em] text-sm transition-all ">
           <p>{{stepInfo.position}}</p>
         </div>
       </div>
