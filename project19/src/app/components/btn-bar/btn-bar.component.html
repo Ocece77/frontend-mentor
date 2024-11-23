@@ -1,1 +1,19 @@
-<p>btn-bar works!</p>
+
+  <!--button bar-->
+<div class="flex items-end w-full h-full justify-between ">
+
+    <div [ngClass]="{'invisible':currStep == 1 }">
+      <a routerLink="{{stepNameList[currStep - 1]}}">
+         <button  class="text-[.5em]">Go back</button> <!--visible only if the current step isnt one-->
+     </a> 
+    </div>
+    
+
+    <div>
+      <a routerLink="{{stepNameList[(currStep - 1)+1]}}">
+        <input type="button" value="Next Step" class="text-[.5em] bg-blue-950 text-white px-2 py-1.5 rounded-md">
+      </a> 
+    </div>
+
+</div>
+

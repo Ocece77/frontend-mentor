@@ -6,27 +6,30 @@
 
  <!--Step list Only on tablet and mobile devices -->
  <div class="col-span-2 absolute lg:hidden ">
+
+   <!--Step list -->
   <app-step-container></app-step-container>
+
 </div>
 
-
-  <!--Parent element rounded card-->
-  <div class="lg:w-[70%] lg:h-4/6 h-[21em] w-5/6  lg:relative absolute lg:top-0 top-[7em] bg-white rounded-xl shadow-lg shadow-gray-200">
+  <!--DESKTOP devices only-->
+  <div class="lg:w-[70%] lg:h-4/6 max-h-[22em] max-w-[540px] lg:relative absolute lg:top-0 top-[7em] bg-white rounded-xl shadow-lg shadow-gray-200">
 
       <!--Child seperated by 2 cols-->
     <div class="grid grid-cols-6 h-full w-full p-5 ">
 
       <!--Child element  => Step list-->
-      <div class="col-span-2 lg:block hidden z-10">
+      <div class="col-span-2 lg:block hidden z-10 ">
         <app-step-container></app-step-container>
       </div>
 
      <!--Child element  => Step list-->
-      <div class="col-span-4"> 
+      <div class="flex flex-col col-span-full lg:col-span-4 lg:px-10 lg:py-4 ">
+
        <router-outlet></router-outlet>
-      </div>
+
       
-    </div>
+      </div>
       
   </div>
     

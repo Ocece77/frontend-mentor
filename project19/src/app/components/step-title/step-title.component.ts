@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Title } from '../../models/title';
 
 @Component({
@@ -8,10 +8,12 @@ import { Title } from '../../models/title';
   styleUrl: './step-title.component.scss'
 })
 export class StepTitleComponent implements OnInit{
-     title! : Title ;
+    @Input() title!: Title;  // Using @Input to pass the title from parent
 
      ngOnInit(): void {
-         this.title;
+      if (!this.title){
+        this.title = new Title("","");
+      }
      }
 
 }

@@ -1,10 +1,10 @@
 <div (click)="onClick()" class="w-full h-full ">
   <!--desktop design-->
-  <div class="w-full flex lg:grid lg:grid-cols-5 lg:gap-2.5 ">
+  <div class="w-full flex lg:grid lg:grid-cols-5 lg:gap-10 ">
       <!--round with the step number-->
       <div class="flex mx-2 justify-center items-center lg:col-span-1 w-full h-full min-w-6">
         <div [ngClass]="{'bg-[#bfe2fd] ' : stepInfo.currentStep}" class=" flex justify-center items-center lg:w-5 lg:h-5 w-7 h-7 rounded-full border border-white hover:bg-[#bfe2fd] hover:text-[#02295a] text-white lg:text-[.6em] text-sm transition-all ">
-          <p>{{stepInfo.position}}</p>
+          <p >{{stepInfo.position}}</p>
         </div>
       </div>
 
@@ -18,12 +18,11 @@
 
        <!--text that describe the step-->
        <div>
-         <p class="text-[.5em] text-white uppercase">{{stepInfo.name}}</p>
+         <p class="text-[.5em] step-info__description text-white uppercase tracking-wider">{{stepInfo.name}}</p>
        </div>
+       
     </div>
     
   </div>
-
-
 
 </div>

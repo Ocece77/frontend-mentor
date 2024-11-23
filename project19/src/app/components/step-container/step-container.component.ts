@@ -8,8 +8,7 @@ import { StepInfoListComponent } from '../../lists/step-info-list/step-info-list
   styleUrl: './step-container.component.scss'
 })
 export class StepContainerComponent implements OnInit{
-ngOnInit(): void {
-    
-}
+  ngOnInit(): void {
+  }
 
 }

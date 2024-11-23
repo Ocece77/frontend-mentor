@@ -18,11 +18,12 @@ export class StepInfoService{
 
   ];
 
+
   getStepInfo(): StepInfo[]{
     return [...this.stepInfos]; /*put the entire array of StepInfo */
   }
 
-
+ 
   findStepById(stepId: number):void{ /*This function find the current step */
     const currStep : StepInfo | undefined = this.stepInfos.find(step => step.id == stepId) /*if the current step  equals the id of the object*/
     const notCurrStep : StepInfo[] | undefined = this.stepInfos.filter(step => step.id != stepId) /*if the current step  do not equals the id of the object*/
@@ -35,6 +36,7 @@ export class StepInfoService{
     notCurrStep!.map(step => step.withCurrentStep(false))/*we the other to false */
     console.log(`current step : ${currStep.id} \n
       other step : ${notCurrStep.map(step => step.id)}`)
+      
   }
 
 }
