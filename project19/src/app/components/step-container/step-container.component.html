@@ -1,0 +1,48 @@
+<!-- Desktop Parent div -->
+<div class="relative rounded-lg lg:block hidden h-full ">
+  <!--Background image-->
+  <img class="absolute -z-10 h-full " src="../assets/images/bg-sidebar-desktop.svg" alt="bg-image">
+  
+    <!--Steps list-->
+   <div class="h-full z-30 py-4">
+
+      <!--list of step-->
+      <ul class="flex flex-col gap-3 h-1/2 ">
+
+        <!--for every step in the step lists-->
+      @for ( step of stepLists ; track step.position){
+          <li class="cursor-pointer">
+            <app-step-info [stepInfo]="step"></app-step-info>
+          </li>
+      }
+
+    </ul>
+
+   </div>
+</div>
+
+<!-- Tablet and Mobile design  -->
+<div class="fixed top-0 left-0 right-0 h-1/4 lg:hidden overflow-hidden ">  
+    <!--Background image-->
+  <img  class="absolute w-full -z-40" src="../assets/images/bg-sidebar-mobile.svg" alt="bg-mobile-image">
+   
+    <!--Steps horizontal list-->
+  <div class="w-full h-full flex justify-center">
+    
+      <div class="flex  w-[80%] justify-evenly items-center ">
+
+      <!--list of step-->
+        <ul class="flex h-1/2 ">
+
+          <!--for every step in the step lists-->
+          @for ( step of stepLists ; track step.position){
+            <li>
+              <app-step-info [stepInfo]="step"></app-step-info>
+            </li>
+          }
+    
+        </ul>
+      </div>
+
+    </div>
+</div>

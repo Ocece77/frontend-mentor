@@ -1,0 +1,34 @@
+<!--Main div-->
+
+
+
+<div class="flex justify-center lg:items-center w-full h-full">
+
+ <!--Step list Only on tablet and mobile devices -->
+ <div class="col-span-2 absolute lg:hidden ">
+  <app-step-container></app-step-container>
+</div>
+
+
+  <!--Parent element rounded card-->
+  <div class="lg:w-[70%] lg:h-4/6 h-[21em] w-5/6  lg:relative absolute lg:top-0 top-[7em] bg-white rounded-xl shadow-lg shadow-gray-200">
+
+      <!--Child seperated by 2 cols-->
+    <div class="grid grid-cols-6 h-full w-full p-5 ">
+
+      <!--Child element  => Step list-->
+      <div class="col-span-2 lg:block hidden z-10">
+        <app-step-container></app-step-container>
+      </div>
+
+     <!--Child element  => Step list-->
+      <div class="col-span-4"> 
+        <app-step-content-container></app-step-content-container>
+      </div>
+      
+    </div>
+      
+  </div>
+    
+</div>
+
