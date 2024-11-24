@@ -13,23 +13,27 @@
 </div>
 
   <!--DESKTOP devices only-->
-  <div class="lg:w-[70%] lg:h-4/6 max-h-[22em] max-w-[540px] lg:relative absolute lg:top-0 top-[7em] bg-white rounded-xl shadow-lg shadow-gray-200">
+  <div class="lg:w-[70%] lg:h-4/6 lg:max-h-[22em] h-fit pb-4 max-w-[540px] lg:relative absolute lg:top-0 top-[7em] bg-white rounded-xl shadow-lg shadow-gray-200">
 
       <!--Child seperated by 2 cols-->
     <div class="grid grid-cols-6 h-full w-full p-5 ">
 
-      <!--Child element  => Step list-->
+      <!-- Step list-->
       <div class="col-span-2 lg:block hidden z-10 ">
         <app-step-container></app-step-container>
       </div>
 
-     <!--Child element  => Step list-->
+     <!--  current content of the step-->
       <div class="flex flex-col col-span-full lg:col-span-4 lg:px-10 lg:py-4 ">
 
        <router-outlet></router-outlet>
+    
+          <div class=" fixed bottom-0 right-0 left-0 lg:p-0  px-5 py-4 lg:shadow-none  bg-white lg:bg-transparent  lg:absolute  lg:bottom-9 lg:right-16 "> 
+            <app-btn-bar></app-btn-bar>
+          </div>
 
-      
       </div>
+
       
   </div>
     

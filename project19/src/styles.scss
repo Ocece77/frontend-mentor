@@ -38,7 +38,7 @@ STYLE COLOR REQUIRED
 - Strawberry red: hsl(354, 84%, 57%)
 */
 
-$title-and-label :  hsl(213, 96%, 18%);
+$title-and-label :  #02295a;
 $paragraph-color : hsl(231, 11%, 63%);
 $input-border:  hsl(229, 24%, 87%);
 $pastille-color : hsl(206, 94%, 87%);
@@ -68,13 +68,11 @@ html , body{
 
   h1{
     color: $title-and-label;
-    font-size: 1.2em;
     font-family: ubuntuBold;
   }
 
   p{
     color : $paragraph-color ;
-    font-size: .5em;
   }
 }
 
@@ -96,4 +94,9 @@ form{
       font-size: .5em;
     }
   }
+}
+
+
+.main-font-bold{
+  font-family: ubuntuBold;
 }
