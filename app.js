@@ -138,8 +138,17 @@ const projects= [
   lang : "REACT JS , TAILWIND CSS, SASS"
 },
   
-
+{
+  id : 19,
+  img : "./project19/public/design/desktop-preview.jpg",
+  url : "",
+  title: "Multi-step form",
+  info: "This multi step form let the user decided for his own plan for a monthly or yearly subscription",
+  lang : "Angular TS , TAILWIND CSS, SASS"
+},
   
+
+
 
 
 ]
