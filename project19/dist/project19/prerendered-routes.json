@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/": {},
-    "/step-confirmation": {},
-    "/step-four": {},
-    "/step-one": {},
-    "/step-three": {},
-    "/step-two": {}
+    "/project19": {},
+    "/project19/step-confirmation": {},
+    "/project19/step-four": {},
+    "/project19/step-one": {},
+    "/project19/step-three": {},
+    "/project19/step-two": {}
   }
 }
