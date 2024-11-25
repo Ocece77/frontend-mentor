@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/project19/',
+  basePath: '/',
   entryPoints: new Map([['', () => import('./main.server.mjs')]]),
 };
   
