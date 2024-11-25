@@ -16,9 +16,9 @@ import { Subscription } from 'rxjs';
   styleUrl: './step-two.component.scss'
 })
 export class StepTwoComponent implements OnInit , OnDestroy{
-  title: Title = titleList[1]; 
-  @Input() isChecked! : boolean ;
-  @Input() currData! : "arcade" | "advanced" | "pro";
+  title: Title = titleList[1]; /*the title of the step and the description */
+  @Input() isChecked! : boolean ;  //get the billing type - yearly(true) or monthly(false)
+  @Input() currData! : string;
   userPlan! : Plan;
 
    // dictionnary of plan and their price
@@ -35,24 +35,21 @@ export class StepTwoComponent implements OnInit , OnDestroy{
 
   ngOnInit(): void {
 
-    const sub = this.currentFullPlan.currentPlan$.subscribe((currPlan)=>{
-      this.userPlan = currPlan.plan
-    });
+ // Subscribe to the current plan observable
+      const sub = this.currentFullPlan.currentPlan$.subscribe(currPlan => {
+        this.userPlan = currPlan.plan;
+      });
     this.subcription.add(sub)// add in subscription so it's following every modification
-     
     // set default values
     if (!this.userPlan){
       this.userPlan = new Plan('arcade' , 9);
     }
+    this.currData = this.currentFullPlan.getUserFullPlan().plan.name!
 
-    // set default values
-    if (!this.currData){
-     this.currData = "arcade"
-    }
   }
 
   ngOnDestroy(): void {
-    this.subcription.unsubscribe(); //stop following the modification
+    this.subcription.unsubscribe(); // Clean up subscriptions
   }
 
   // check if this is monthly or yealy
@@ -66,18 +63,19 @@ export class StepTwoComponent implements OnInit , OnDestroy{
   }
 
   setCurrData(e: Event) {
-    const target = e.target as HTMLElement; // access the target element
-    const planCard = target.closest(".plan__card"); // find the element with the class "plan__card"
-    const planName = planCard?.getAttribute("data-name"); // retrieve the value
-  
-    if (planName && planName in this.price) { // check if this is not null
-      this.currData = planName as "arcade" | "advanced" | "pro"; // say that this is one of the three type
-      const pricePerBilling = this.isChecked ? this.price[this.currData]*10 :  this.price[this.currData]//check is Yearly, uncheck is monthly
-      this.userPlan = new Plan(this.currData, pricePerBilling); //create a new plan
-      this.currentFullPlan.changePlan(this.userPlan); 
-  
+    const target = e.target as HTMLElement;
+    const planCard = target.closest(".plan__card"); // div element with the class .plan__card
+    const planName = planCard?.getAttribute("data-name"); // get the value of the dataset "data-name"
+    
+    if (planName && planName in this.price) { 
+      const selectedPlan = planName as "arcade" | "advanced" | "pro"; //can only be this three value
+      const pricePerBilling = this.isChecked ? this.price[selectedPlan] * 10 : this.price[selectedPlan]; 
+      const newPlan = new Plan(selectedPlan, pricePerBilling); // create a new plan
+      this.currentFullPlan.changePlan(newPlan); // update the current user choice of plan
+      this.currData = selectedPlan
     } 
   }
+  
 
 
 }

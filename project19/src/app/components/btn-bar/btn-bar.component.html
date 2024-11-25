@@ -8,8 +8,8 @@
     
 
     <div>
-        <input (click)="onNextClick()" [ngClass]="{'hidden':currStep == 4 }"type="button" value="Next Step" class="text-[.5em] bg-blue-950 text-white px-2 py-1.5 rounded-md">
-        <input (click)="navigateToFinal()" [ngClass]="{'hidden':currStep !== 4 }" type="button" value="Confirm" class="text-[.5em] bg-purplish text-white px-2 py-1.5 rounded-md">
+        <input (click)="onNextClick()" [ngClass]="{'hidden':currStep == 4 }"type="submit" value="Next Step" class="text-[.5em] bg-blue-950 text-white px-2 py-1.5 rounded-md">
+        <input (click)="navigateToFinal()" [ngClass]="{'hidden':currStep !== 4 }" type="submit" value="Confirm" class="text-[.5em] bg-purplish text-white px-2 py-1.5 rounded-md">
     </div>
 
 </div>

@@ -6,6 +6,7 @@ import { StepFourComponent } from './step/step-four/step-four.component';
 import { StepConfirmationComponent } from './step/step-confirmation/step-confirmation.component';
 
 export const routes: Routes = [
+  {path : '', component : StepOneComponent},
   {path : 'step-one', component : StepOneComponent},
   {path : 'step-two', component : StepTwoComponent},
   {path : 'step-three', component : StepThreeComponent},

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { StepInfoService } from '../../services/step-info.service';
 import { StepInfo } from '../../models/step-info';
 import { Subscription } from 'rxjs';
+import { PersonalInfo } from '../../models/personal-info';
 
 @Component({
   selector: 'app-btn-bar',
@@ -18,13 +19,12 @@ export class BtnBarComponent implements  OnInit,OnDestroy {
 
   @Input() stepInfo! :  StepInfo;/* step info object */
   currStep!:number; //store the current step
-
+  formInfo! :PersonalInfo
   public stepNameDict :{[id:number] : string}={//to get the page associated with the current step
     1:"step-one",
     2:"step-two",
     3:"step-three", 
     4:"step-four",
-    
    }
   
    constructor(private stepInfoService : StepInfoService, //service created by me to store step info 
@@ -36,6 +36,7 @@ export class BtnBarComponent implements  OnInit,OnDestroy {
     const sub = this.stepInfoService.currentStep$.subscribe(step => { //subscribe to follow every change of the currenStep paramaters
       this.currStep = step;
     });
+   
     this.subscription.add(sub); //to active the susbcription
   }
 

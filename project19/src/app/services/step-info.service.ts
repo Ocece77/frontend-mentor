@@ -26,6 +26,7 @@ export class StepInfoService{
 
 
 
+  
 
   getStepInfo(): StepInfo[]{
     return [...this.stepInfos]; /*put the entire array of StepInfo */
@@ -50,8 +51,6 @@ export class StepInfoService{
     notCurrStep!.map(step => step.withCurrentStep(false) )/*set other value to false */
 
     this.currentStepSubject.next(stepId);//update the value of BehaviorSubject
-
-    console.log(`current step : ${currStep.id} | other step : ${notCurrStep.map(step => step.id)}`)
       
   }
 

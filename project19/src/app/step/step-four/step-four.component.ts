@@ -5,6 +5,7 @@ import { Title, titleList } from '../../models/title';
 import { FullPlanInfo } from '../../services/full-plan-info.service';
 import { FullPlan } from '../../models/full-plan';
 import { RouterLink } from '@angular/router';
+import { Ons } from '../../models/ons';
 
 @Component({
   selector: 'app-step-four',
@@ -20,6 +21,7 @@ export class StepFourComponent implements OnInit {
   fullPlanData! : FullPlan ;
   typeBilling! : boolean ;
   totalAmount! : number ;
+  onsArray! : Ons[];
 
   
   constructor(private fullplaninfo : FullPlanInfo){}
@@ -28,6 +30,7 @@ export class StepFourComponent implements OnInit {
     this.fullPlanData = this.fullplaninfo.getUserFullPlan();
     this.typeBilling = this.fullplaninfo.getTypeBilling();
     this.totalAmount = this.fullplaninfo.getTotalAmount();
+    this.onsArray = Array.from(this.fullPlanData.ons)
   }
 
 

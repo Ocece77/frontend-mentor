@@ -12,8 +12,6 @@ export class FullPlanInfo{
 
   private userfullPlan = new FullPlan()
   private typeBilling: boolean = false; // false is Monthly , true is Yearly
-  private totalAmount : number = 0;
-
 
   private currentPlanSubject = new BehaviorSubject<FullPlan>(this.userfullPlan); // Initialize at step 1
   public currentPlan$ = this.currentPlanSubject.asObservable(); // Observable for other components to subscribe
@@ -30,31 +28,31 @@ export class FullPlanInfo{
 
   //get the value of the total amount
   getTotalAmount(){
-    const additionAmount = this.userfullPlan.plan.price! +  this.userfullPlan.ons.reduce((acc, curr) => acc + curr.price  , 0) 
+    const additionAmount = this.userfullPlan.plan.price! +  Array.from(this.userfullPlan.ons).reduce((acc, curr) => acc + curr.price  , 0) 
     return this.typeBilling ? additionAmount * 10 : additionAmount
   }
 
   addElement(element: Plan | Ons) {
     if (element instanceof Plan) {
-      // If the element is a Plan, update the user's full plan.
       this.userfullPlan.plan = element;
     } else if (element instanceof Ons) {
-      const onsIndex = this.userfullPlan.ons.indexOf(element);
-  
-      if (onsIndex === -1) {
-        // If the Ons is not already in the list, add it.
-        this.userfullPlan.ons = [...this.userfullPlan.ons, element];
+   //check if there's already an ons in it - convert the ons set into and array thank to the Array.from() method and find if there's the ons in it already 
+      const existingOns = Array.from(this.userfullPlan.ons).find((ons) => ons.name === element.name);   
+   
+      if (existingOns) {
+        this.userfullPlan.ons.delete(existingOns); // delete the existing ons
       } else {
-        // If the Ons is already in the list, remove it.
-        this.userfullPlan.ons = this.userfullPlan.ons.filter((ons) => ons !== element);
+        this.userfullPlan.ons.add(element); // add a new ons
       }
     }
+    this.currentPlanSubject.next(this.userfullPlan); // change the value of the susbriber
   }
-
+  
   changePlan(plan: Plan): void {
-    const current = this.currentPlanSubject.value;
-    this.currentPlanSubject.next({ ...current, plan }); //update the plan
+    this.userfullPlan.plan = plan; //update the plan object
+    this.currentPlanSubject.next(this.userfullPlan); // spread the current value in the behavior object so this update the value
   }
+  
 
   changeTypeOfBilling(checkElement : boolean){
     this.typeBilling = checkElement;

@@ -21,7 +21,8 @@
 
   
    <!--ons list-->
-      @for (ons of fullPlanData.ons ; track ons.name){
+   @if (fullPlanData.ons){
+    @for (ons of fullPlanData.ons ; track ons.name){
         <div class="flex justify-between text-sm lg:mb-0 mb-3">
           <div>
             <p class="lg:text-[.65em] text-gray-400">{{ons.name}}</p>
@@ -33,7 +34,14 @@
 
         </div>
    
+      } 
+    }
+    @if (onsArray.length === 0){
+      <div>
+        <p class="lg:text-[.60em] text-gray-400">no ons added</p>
+      </div>
       }
+        
 
   </div>
 
