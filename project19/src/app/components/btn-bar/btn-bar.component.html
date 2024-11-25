@@ -1,18 +1,15 @@
 
   <!--button bar-->
-<div class="flex items-end  w-full h-full lg:justify-end lg:gap-52 justify-between ">
+<div [ngClass]="{'hidden':currStep === 5 }" class="flex items-end w-full h-full  lg:gap-52 lg:justify-end justify-between ">
 
     <div [ngClass]="{'invisible':currStep == 1 }">
-      <a routerLink="{{stepNameList[currStep - 1]}}">
-         <button  class="text-[.5em]">Go back</button> <!--visible only if the current step isnt one-->
-     </a> 
+         <button (click)="onBackClick()" class="text-[.5em] text-gray-400">Go back</button> <!--visible only if the current step isnt one-->
     </div>
     
 
     <div>
-      <a routerLink="{{stepNameList[(currStep - 1)+1]}}">
-        <input type="button" value="Next Step" class="text-[.5em] bg-blue-950 text-white px-2 py-1.5 rounded-md">
-      </a> 
+        <input (click)="onNextClick()" [ngClass]="{'hidden':currStep == 4 }"type="button" value="Next Step" class="text-[.5em] bg-blue-950 text-white px-2 py-1.5 rounded-md">
+        <input (click)="navigateToFinal()" [ngClass]="{'hidden':currStep !== 4 }" type="button" value="Confirm" class="text-[.5em] bg-purplish text-white px-2 py-1.5 rounded-md">
     </div>
 
 </div>

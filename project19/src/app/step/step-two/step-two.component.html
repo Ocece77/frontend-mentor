@@ -20,7 +20,7 @@
                 <!--title and description-->
                 <div class="plan__title flex flex-col lg:p-2 lg:pt-3.5  lg:justify-normal justify-center">
                   <p class="text-[.6em] ">Arcade</p>
-                  <p class="text-[.5em] opacity-30">$9/mo</p>
+                  <p class="text-[.5em] opacity-30">${{ isChecked ? price["arcade"]*10 :price["arcade"] }}/{{ isChecked ? "yr" :"mo" }}</p>
                 </div>
 
           </div>
@@ -39,7 +39,7 @@
              <!--title and description-->
              <div class="plan__title flex flex-col lg:p-2 lg:pt-3.5  lg:justify-normal justify-center">
               <p class="text-[.6em] ">Advanced</p>
-              <p class="text-[.5em] opacity-30">$12/mo</p>
+              <p class="text-[.5em] opacity-30">${{ isChecked ? price["advanced"]*10 :price["advanced"] }}/{{ isChecked ? "yr" :"mo" }}</p>
             </div>
 
           </div>
@@ -59,7 +59,7 @@
              <!--title and description-->
             <div class="plan__title flex flex-col lg:p-2 lg:pt-3.5  lg:justify-normal justify-center">
               <p class="text-[.6em] ">Pro</p>
-              <p class="text-[.5em] opacity-30">$15/mo</p>
+              <p class="text-[.5em] opacity-30">${{ isChecked ? price["pro"]*10 :price["pro"] }}/{{ isChecked ? "yr" :"mo" }}</p>
             </div>
 
           </div>

@@ -100,3 +100,9 @@ form{
 .main-font-bold{
   font-family: ubuntuBold;
 }
+.finish-up__plan{
+  p{
+    color :$title-and-label;
+    font-family: ubuntuBold;
+  }
+}

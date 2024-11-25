@@ -15,13 +15,23 @@ export class StepInfoComponent implements OnInit {
   constructor(private stepInfoService : StepInfoService){}
 
   ngOnInit(): void {
-
     if (!this.stepInfo){ /* put the default step info if this doesn't exist */
       this.stepInfo = new StepInfo()
     }
-  }
-  onClick(){
-    this.stepInfoService.findStepById(this.stepInfo.id)
-  }
+
+   
+    this.stepInfoService.currentStep$.subscribe(currStep => { //sub to follow every modification in the current step
+          if (this.stepInfo.position === currStep) {
+            this.stepInfo.currentStep = true; // set the current step to true
+          } else {
+            this.stepInfo.currentStep = false;// set the current step to false
+          }
+        });
+      }
+
+      onClick(){
+        this.stepInfoService.changeStepById(this.stepInfo.id)
+      }
+
 
 }

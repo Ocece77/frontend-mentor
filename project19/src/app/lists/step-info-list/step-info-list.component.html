@@ -1,6 +1,6 @@
 <ul class="flex lg:flex-col lg:gap-4 lg:h-1/2  ">
 @for ( step of stepLists ; track step.position){
-  <li class="cursor-pointer">
+  <li class="cursor-pointer"  [ngClass]="{'hidden': step.id === 5}">
     <a routerLink="step-{{step.positionString}}">
       <app-step-info [stepInfo]="step"></app-step-info>
     </a> 

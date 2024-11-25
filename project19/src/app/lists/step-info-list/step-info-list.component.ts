@@ -3,10 +3,11 @@ import { StepInfo } from '../../models/step-info';
 import { StepInfoComponent } from '../../components/step-info/step-info.component';
 import { StepInfoService } from '../../services/step-info.service';
 import { RouterLink } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-step-info-list',
-  imports: [StepInfoComponent, RouterLink],
+  imports: [StepInfoComponent, RouterLink , NgClass],
   templateUrl: './step-info-list.component.html',
   styleUrl: './step-info-list.component.scss'
 })

@@ -1,1 +1,50 @@
-<p>step-four works!</p>
+
+<div class="flex flex-col gap-3 relative h-full">
+  <!--Title-->
+  <app-step-title [title]="title"></app-step-title>
+
+ <!-- container-->
+  <div class="bg-purplish bg-opacity-5 rounded-2xl p-3">
+
+    <!--Plan name-->
+    <div class="text-sm finish-up__plan flex justify-between  border-b-[.08em] pb-2 mb-4">
+
+      <div class="flex flex-col ">
+        <p class="lg:text-[.65em] " >{{fullPlanData.plan.name}} ({{typeBilling ? "Yearly" : "Monthly"}})</p>
+        <a routerLink="/step-two" class="lg:text-[.65em] lg:-mt-1.5  text-gray-400 underline">Change</a>
+      </div>
+
+      <div class="flex items-center">
+        <p class="lg:text-[.65em]">${{typeBilling ? fullPlanData.plan.price! * 10: fullPlanData.plan.price }}/{{typeBilling ? "yr" : "mo"}}</p>
+      </div>
+    </div>
+
+  
+   <!--ons list-->
+      @for (ons of fullPlanData.ons ; track ons.name){
+        <div class="flex justify-between text-sm lg:mb-0 mb-3">
+          <div>
+            <p class="lg:text-[.65em] text-gray-400">{{ons.name}}</p>
+          </div>
+
+          <div>
+            <p class="lg:text-[.65em] text-[#02295a]">+${{typeBilling ? ons.price * 10 : ons.price  }}/{{typeBilling ? "yr" : "mo"}}</p>
+          </div>
+
+        </div>
+   
+      }
+
+  </div>
+
+  <div class="flex justify-between text-sm px-3">
+    <div>
+        <p  class="lg:text-[.65em] text-gray-400">Total (per {{typeBilling ? "year" : "month"}})</p>
+      </div>
+    <div>
+      <p class="text-purplish main-font-bold">${{totalAmount}}/{{typeBilling ? "yr" : "mo"}}</p>
+    </div>
+  </div>
+   
+</div>
+

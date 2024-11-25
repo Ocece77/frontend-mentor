@@ -9,11 +9,11 @@
     <div class="flex flex-col gap-2 lg:gap-3 h-full w-full">
 
       <!--Online service --> 
-        <div  class="ons__card ursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
-          <div class="grid grid-cols-5  ">
+        <div [ngClass]="{'bg-purplish': checkList.includes('first-service')}" data-name="first-service" class="ons__card bg-opacity-5 cursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
+          <div class="grid grid-cols-5">
 
             <div class="flex p-2 col-span-1 justify-center">
-              <input  type="checkbox" name="first-service" id="first-service">
+              <input (click)="addOns($event)"  type="checkbox" name="first-service" id="first-service"  class="accent-purplish">
             </div>
 
                 <!--title and description-->
@@ -24,7 +24,7 @@
 
             <!--price + -->
             <div class="flex justify-center items-center">
-              <p class="text-purple-800 text-[.6em]">+$1/mo</p>
+              <p class="text-purplish text-[.6em]">+${{typeOfBilling? servicesList['first-service'].price *10 : servicesList['first-service'].price }}/{{typeOfBilling ? "yr" : "mo"}}</p>
             </div>
 
 
@@ -33,12 +33,12 @@
 
 
         <!--Larger Storage --> 
-        <div  class="ons__card ursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
+        <div [ngClass]="{'bg-purplish': checkList.includes('second-service')}" data-name="second-service"  class="ons__card bg-opacity-5 cursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
           <div class="grid grid-cols-5 ">
   
              <!--checkbox icon-->
              <div class="flex p-2 col-span-1 justify-center">
-              <input  type="checkbox" name="second-service" id="second-service">
+              <input (click)="addOns($event)"   type="checkbox" name="second-service" id="second-service"  class="accent-purplish">
             </div>
 
              <!--title and description-->
@@ -49,7 +49,7 @@
 
               <!--price + -->
             <div class="flex justify-center items-center">
-              <p class="text-purple-800 text-[.6em]">+$2/mo</p>
+              <p class="text-purplish text-[.6em]">+${{typeOfBilling? servicesList['second-service'].price *10 : servicesList['second-service'].price }}/{{typeOfBilling ? "yr" : "mo"}}</p>
             </div>
 
 
@@ -58,14 +58,14 @@
         </div>
 
 
-         <!--Customizable Profile--> 
-         <div  class="ons__card ursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
+         <!--Customizable Profile [ngClass]="{'bg-purplish':  , 'border-purplish' :}"--> 
+         <div [ngClass]="{'bg-purplish': checkList.includes('third-service')}" data-name="third-service"  class="ons__card bg-opacity-5 cursor-pointer border border-opacity-20 hover:border-purple-900 rounded-md hover:bg-purple-50 transition-all  h-12">
           <div class="grid grid-cols-5 ">
 
              <!--checkbox icon-->
             <!--image icon-->
             <div class="flex p-2 col-span-1 justify-center">
-              <input  type="checkbox" name="third-service" id="third-service">
+              <input (click)="addOns($event)"  type="checkbox" name="third-service" id="third-service" class="accent-purplish">
             </div>
 
              <!--title and description-->
@@ -76,7 +76,7 @@
 
              <!--price + -->
             <div class="flex justify-center items-center">
-              <p class="text-purple-800 text-[.6em]">+$2/mo</p>
+              <p class="text-purplish text-[.6em]">+${{typeOfBilling? servicesList['third-service'].price *10 : servicesList['third-service'].price }}/{{typeOfBilling ? "yr" : "mo"}}</p>
             </div>
 
 
