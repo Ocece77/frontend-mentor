@@ -141,7 +141,7 @@ const projects= [
 {
   id : 19,
   img : "./project19/public/design/desktop-preview.jpg",
-  url : "",
+  url : "https://project19-liu3.onrender.com",
   title: "Multi-step form",
   info: "This multi step form let the user decided for his own plan for a monthly or yearly subscription",
   lang : "Angular TS , TAILWIND CSS, SASS"

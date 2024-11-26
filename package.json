@@ -7,7 +7,7 @@
     "projet15": "cd projet15 && npm i && npm run build",
     "project16": "cd project16 && npm i && npm run build",
     "project17": "cd project17 && npm i && npm run build",
-    "project19" : "cd project19 && npm i && ng build --configuration production",
+    "project19" : "cd project19 && npm i && npm run build",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
