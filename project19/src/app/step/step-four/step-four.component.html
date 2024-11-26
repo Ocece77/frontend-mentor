@@ -25,11 +25,11 @@
     @for (ons of fullPlanData.ons ; track ons.name){
         <div class="flex justify-between text-sm lg:mb-0 mb-3">
           <div>
-            <p class="lg:text-[.65em] text-gray-400">{{ons.name}}</p>
+            <p class="text-[.65em]  text-gray-400">{{ons.name}}</p>
           </div>
 
           <div>
-            <p class="lg:text-[.65em] text-[#02295a]">+${{typeBilling ? ons.price * 10 : ons.price  }}/{{typeBilling ? "yr" : "mo"}}</p>
+            <p class="text-[.65em] text-[#02295a]">+${{typeBilling ? ons.price * 10 : ons.price  }}/{{typeBilling ? "yr" : "mo"}}</p>
           </div>
 
         </div>
@@ -38,7 +38,7 @@
     }
     @if (onsArray.length === 0){
       <div>
-        <p class="lg:text-[.60em] text-gray-400">no ons added</p>
+        <p class="text-[.60em] text-gray-400">no ons added</p>
       </div>
       }
         
@@ -47,7 +47,7 @@
 
   <div class="flex justify-between text-sm px-3">
     <div>
-        <p  class="lg:text-[.65em] text-gray-400">Total (per {{typeBilling ? "year" : "month"}})</p>
+        <p  class="text-[.65em] text-gray-400">Total (per {{typeBilling ? "year" : "month"}})</p>
       </div>
     <div>
       <p class="text-purplish main-font-bold">${{totalAmount}}/{{typeBilling ? "yr" : "mo"}}</p>
