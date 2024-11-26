@@ -1,9 +1,9 @@
-import { NgClass, } from '@angular/common';
-import { Component, DoCheck, Input, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Location, NgClass, } from '@angular/common';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {  NavigationEnd, Router, RouterLink } from '@angular/router';
 import { StepInfoService } from '../../services/step-info.service';
 import { StepInfo } from '../../models/step-info';
-import { Subscription } from 'rxjs';
+import { filter, Subscription } from 'rxjs';
 import { PersonalInfo } from '../../models/personal-info';
 
 @Component({
@@ -20,6 +20,8 @@ export class BtnBarComponent implements  OnInit,OnDestroy {
   @Input() stepInfo! :  StepInfo;/* step info object */
   currStep!:number; //store the current step
   formInfo! :PersonalInfo
+  route!: string;
+
   public stepNameDict :{[id:number] : string}={//to get the page associated with the current step
     1:"step-one",
     2:"step-two",
@@ -28,17 +30,31 @@ export class BtnBarComponent implements  OnInit,OnDestroy {
    }
   
    constructor(private stepInfoService : StepInfoService, //service created by me to store step info 
-   private router: Router){}//to navigate through pages lioke a link <a></a>
+   private router: Router  , private location: Location){}
              
    private subscription: Subscription = new Subscription(); // create and object that follow/subscribe every change 
 
-  ngOnInit(): void {
-    const sub = this.stepInfoService.currentStep$.subscribe(step => { //subscribe to follow every change of the currenStep paramaters
+   ngOnInit(): void {
+    this.router.events.subscribe(() => {
+      const path = this.location.path().slice(1); // remove de '/'
+
+      const stepKey = Object.entries(this.stepNameDict).find(      // find the key corresponding to the path
+        ([key, value]) => value === path
+      )?.[0];
+    
+      // update currStep
+      this.currStep = stepKey ? Number(stepKey) : this.currStep;  
+      this.stepInfoService.changeStepById(this.currStep); //change the current step for the actual one
+    });
+  
+    const sub = this.stepInfoService.currentStep$.subscribe((step) => {
       this.currStep = step;
     });
-   
-    this.subscription.add(sub); //to active the susbcription
+    this.stepInfoService.changeStepById(this.currStep);
+    this.subscription.add(sub);
   }
+  
+  
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();//stop following every change so the data can be refresh
