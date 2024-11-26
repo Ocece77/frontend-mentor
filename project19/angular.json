@@ -55,7 +55,6 @@
               "optimization": false,
               "outputHashing": "none",
               "sourceMap": true,
-              "extractCss": false,
               "namedChunks": true
             }
           },
